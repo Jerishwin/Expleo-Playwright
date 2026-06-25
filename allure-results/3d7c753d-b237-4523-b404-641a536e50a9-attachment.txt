@@ -1,0 +1,3 @@
+Dialog message: Hello
+Dialog message: What is your name?
+Dialog message: Press OK to confirm
