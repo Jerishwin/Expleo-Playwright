@@ -5,39 +5,22 @@ import dotenv from 'dotenv';
   dotenv.config({ path: `./env/.env.${envName}` });
 
 export default defineConfig({
-  testDir: './automationExcercise',
-  fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  testDir: './tests',
+  testMatch:['/tests/testmu.test.ts'],
   reporter: [
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['html', { outputFolder: 'playwright-report', open: 'always' }],
     ['allure-playwright', { outputFolder: 'allure-results', detail: true }],
   ],
 
   use: {
+    browserName: 'firefox',
     headless: true,
-    trace: 'retain-on-failure',
+    viewport: null,
+    launchOptions: {
+      args: ['--start-maximized']
+    },
+    trace: 'on',
     screenshot: 'only-on-failure',
-    video:'retain-on-failure'
-  },
-
-  projects: [
-    
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-    
-  ],
+    video:'on'
+  }
 });

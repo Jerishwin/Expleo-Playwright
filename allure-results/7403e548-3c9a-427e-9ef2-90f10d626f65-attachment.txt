@@ -1,0 +1,3 @@
+Press a button!
+Alert dismised!
+Promise { <pending> }
