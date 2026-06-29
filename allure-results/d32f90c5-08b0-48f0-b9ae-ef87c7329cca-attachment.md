@@ -1,0 +1,1825 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: action.test.ts >> Action Test
+- Location: tests\action.test.ts:3:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.check: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('#radio2')
+    - locator resolved to <input id="radio2" type="radio" name="gender" value="female"/>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - iframe [ref=e5]:
+    - table [ref=f3e8]:
+      - rowgroup [ref=f3e9]:
+        - row "Go to Blogger.com Search More Create Blog Sign In" [ref=f3e10]:
+          - cell "Go to Blogger.com" [ref=f3e11]:
+            - link "Go to Blogger.com" [ref=f3e12] [cursor=pointer]:
+              - /url: https://www.blogger.com/
+          - cell "Search" [ref=f3e13]:
+            - table [ref=f3e16]:
+              - rowgroup [ref=f3e17]:
+                - row "Search" [ref=f3e18]:
+                  - cell [ref=f3e19]:
+                    - textbox [ref=f3e20]
+                  - cell "Search" [ref=f3e21]:
+                    - button "Search" [ref=f3e22] [cursor=pointer]
+          - cell "More" [ref=f3e23]:
+            - combobox "More options" [ref=f3e24]:
+              - option "More" [selected]
+              - option "Share by email"
+              - option "Share with Facebook"
+              - option "Share with Twitter"
+              - option "Report Abuse"
+          - cell "Create Blog Sign In" [ref=f3e25]:
+            - link "Create Blog" [ref=f3e26] [cursor=pointer]:
+              - /url: ./onboarding
+            - link "Sign In" [ref=f3e27] [cursor=pointer]:
+              - /url: https://www.blogger.com/
+  - generic [ref=e19]:
+    - banner [ref=e20]:
+      - generic [ref=e26]:
+        - heading "omayo (QAFox.com)" [level=1] [ref=e28]
+        - generic:
+          - paragraph
+    - generic [ref=e31]:
+      - generic [ref=e34]:
+        - link "Drop Down Menus":
+          - /url: http://24work.blogspot.com/
+          - img "Drop Down Menus" [ref=e35] [cursor=pointer]
+        - link "CSS Drop Down Menu":
+          - /url: http://24work.blogspot.com/
+          - img "CSS Drop Down Menu" [ref=e36] [cursor=pointer]
+        - link "Pure CSS Dropdown Menu":
+          - /url: http://24work.blogspot.com/
+          - img "Pure CSS Dropdown Menu" [ref=e37] [cursor=pointer]
+        - list [ref=e39]:
+          - listitem [ref=e40]:
+            - link "Home" [ref=e41] [cursor=pointer]:
+              - /url: http://www.omayo.blogspot.com
+          - listitem [ref=e42]:
+            - link "Blogs" [ref=e43] [cursor=pointer]:
+              - /url: "#"
+      - paragraph [ref=e47]:
+        - text: This blog is created for
+        - link "http://www.Selenium143.blogspot.com" [ref=e48] [cursor=pointer]:
+          - /url: http://www.Selenium143.blogspot.com
+    - generic [ref=e52]:
+      - generic:
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e67]:
+              - heading "Monday, May 13, 2013" [level=2] [ref=e68]
+              - generic [ref=e71]:
+                - heading "Page One" [level=3] [ref=e72]:
+                  - link "Page One" [ref=e73] [cursor=pointer]:
+                    - /url: https://omayo.blogspot.com/2013/05/page-one.html
+                - generic [ref=e74]: This is a sample text in the Page One.
+            - link "Home" [ref=e78] [cursor=pointer]:
+              - /url: https://omayo.blogspot.com/
+            - generic [ref=e80]:
+              - text: "Subscribe to:"
+              - link "Posts (Atom)" [ref=e81] [cursor=pointer]:
+                - /url: https://omayo.blogspot.com/feeds/posts/default
+          - generic [ref=e82]:
+            - heading "Text Area Field" [level=2] [ref=e83]
+            - textbox [ref=e85]
+          - generic [ref=e86]:
+            - heading "Text Area Field Two" [level=2] [ref=e87]
+            - textbox [ref=e89]: The cat was playing in the garden.
+          - generic [ref=e90]:
+            - heading "Table" [level=2] [ref=e91]
+            - table [ref=e93]:
+              - rowgroup [ref=e94]:
+                - row "Name Age Place" [ref=e95]:
+                  - columnheader "Name" [ref=e96]
+                  - columnheader "Age" [ref=e97]
+                  - columnheader "Place" [ref=e98]
+              - rowgroup [ref=e99]:
+                - row "Kishore 22 Delhi" [ref=e100]:
+                  - cell "Kishore" [ref=e101]
+                  - cell "22" [ref=e102]
+                  - cell "Delhi" [ref=e103]
+                - row "Manish 25 Pune" [ref=e104]:
+                  - cell "Manish" [ref=e105]
+                  - cell "25" [ref=e106]
+                  - cell "Pune" [ref=e107]
+                - row "Praveen 29 Bangalore" [ref=e108]:
+                  - cell "Praveen" [ref=e109]
+                  - cell "29" [ref=e110]
+                  - cell "Bangalore" [ref=e111]
+                - row "Dheepthi 31 Mumbai" [ref=e112]:
+                  - cell "Dheepthi" [ref=e113]
+                  - cell "31" [ref=e114]
+                  - cell "Mumbai" [ref=e115]
+          - generic [ref=e116]:
+            - heading "HTML Form" [level=2] [ref=e117]
+            - generic [ref=e119]:
+              - text: "Username:"
+              - textbox [ref=e120]
+              - text: "Password:"
+              - textbox [ref=e121]
+              - button "LogIn" [ref=e122]
+          - generic [ref=e123]:
+            - heading "Iframe1 & Iframe2" [level=2] [ref=e124]
+            - generic [ref=e125]:
+              - iframe [active] [ref=e126]:
+                - generic [active] [ref=f1e1]:
+                  - link "Google+" [ref=f1e2] [cursor=pointer]:
+                    - /url: https://plus.google.com/100812711311397735125
+                  - generic [ref=f1e16]:
+                    - banner [ref=f1e17]:
+                      - link "Selenium143" [ref=f1e24] [cursor=pointer]:
+                        - /url: https://selenium143.blogspot.com/
+                        - img "Selenium143" [ref=f1e25]
+                    - table [ref=f1e33]:
+                      - rowgroup [ref=f1e34]:
+                        - row [ref=f1e35]:
+                          - cell [ref=f1e36]:
+                            - link [ref=f1e37] [cursor=pointer]:
+                              - /url: https://t.me/qafoxoriginal
+                              - img [ref=f1e38]
+                          - cell [ref=f1e39]:
+                            - link [ref=f1e40] [cursor=pointer]:
+                              - /url: https://www.youtube.com/c/QAFox/playlists
+                              - img [ref=f1e41]
+                          - cell [ref=f1e42]:
+                            - link [ref=f1e43] [cursor=pointer]:
+                              - /url: https://www.udemy.com/user/arun-motoori/
+                              - img [ref=f1e44]
+                          - cell [ref=f1e45]:
+                            - link [ref=f1e46] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/arunmotoori/
+                              - img [ref=f1e47]
+                    - generic [ref=f1e52]:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - complementary
+                        - generic:
+                          - generic:
+                            - complementary
+                    - contentinfo [ref=f1e57]:
+                      - generic [ref=f1e60]:
+                        - generic [ref=f1e61]:
+                          - link [ref=f1e63] [cursor=pointer]:
+                            - /url: "#"
+                            - img [ref=f1e64]
+                          - table [ref=f1e67]:
+                            - rowgroup [ref=f1e68]:
+                              - row "What is Selenium? What should I know prior to learning Selenium? Install Chropath Add-on for Chrome Browser How to use Chropath Add-on in Chrome Browser? Install Firepath Add-on for Firefox How to use Firepath? Install Java JDK and Configure it for executing the Programs written in Java language Install Eclipse IDE How to Launch Eclipse IDE? How to create projects in Eclipse IDE? How to configure the created project in Eclipse IDE?" [ref=f1e69]:
+                                - cell "What is Selenium? What should I know prior to learning Selenium? Install Chropath Add-on for Chrome Browser How to use Chropath Add-on in Chrome Browser?" [ref=f1e70]:
+                                  - list [ref=f1e71]:
+                                    - listitem [ref=f1e72]:
+                                      - link "What is Selenium?" [ref=f1e74] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/what-is-selenium.html
+                                    - listitem [ref=f1e75]:
+                                      - link "What should I know prior to learning Selenium?" [ref=f1e77] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/2-what-should-i-know-prior-to-learning.html
+                                    - listitem [ref=f1e78]:
+                                      - link "Install Chropath Add-on for Chrome Browser" [ref=f1e80] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/3-install-firebug-addon-for-firefox.html
+                                    - listitem [ref=f1e81]:
+                                      - link "How to use Chropath Add-on in Chrome Browser?" [ref=f1e83] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/4-how-to-use-firebug_20.html
+                                - cell "Install Firepath Add-on for Firefox How to use Firepath? Install Java JDK and Configure it for executing the Programs written in Java language Install Eclipse IDE" [ref=f1e84]:
+                                  - list [ref=f1e85]:
+                                    - listitem [ref=f1e86]:
+                                      - link "Install Firepath Add-on for Firefox" [ref=f1e88] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/5-install-firepath-addon-for-firefox.html
+                                    - listitem [ref=f1e89]:
+                                      - link "How to use Firepath?" [ref=f1e91] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/6-how-to-use-firepath.html
+                                    - listitem [ref=f1e92]:
+                                      - link "Install Java JDK and Configure it for executing the Programs written in Java language" [ref=f1e94] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/7-install-java-jdk-and-configure.html
+                                    - listitem [ref=f1e95]:
+                                      - link "Install Eclipse IDE" [ref=f1e97] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/8-install-eclipse-ide.html
+                                - cell "How to Launch Eclipse IDE? How to create projects in Eclipse IDE? How to configure the created project in Eclipse IDE?" [ref=f1e98]:
+                                  - list [ref=f1e99]:
+                                    - listitem [ref=f1e100]:
+                                      - link "How to Launch Eclipse IDE?" [ref=f1e102] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/8-how-to-use-eclipse-ide.html
+                                    - listitem [ref=f1e103]:
+                                      - link "How to create projects in Eclipse IDE?" [ref=f1e105] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/how-to-configure-eclipse-ide.html
+                                    - listitem [ref=f1e106]:
+                                      - link "How to configure the created project in Eclipse IDE?" [ref=f1e108] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/11-how-to-configure-created-project-in.html
+                                - cell [ref=f1e109]
+                          - generic [ref=f1e111]:
+                            - generic:
+                              - generic:
+                                - iframe
+                          - generic [ref=f1e113]:
+                            - separator [ref=f1e114]
+                            - link [ref=f1e115] [cursor=pointer]:
+                              - /url: "#"
+                              - img [ref=f1e116]
+                          - table [ref=f1e119]:
+                            - rowgroup [ref=f1e120]:
+                              - row "Install Selenium IDE What is Selenium IDE ? Record and Playback using Selenium IDE Validating Elements using Selenium IDE Validating Elements using Assert Mechanism Validating Elements using Verify Mechanism Viewing the source code of the steps recorded using Selenium IDE in our desired language What are Locators ? Different types of Locators to identify UI elements Tools in Selenium to find out the Locators Locate UI elements by ID Locate UI elements by Name Locate UI elements by Link Locate UI elements by XPath Locate UI elements by CSS Finding locators for UI elements using the Selenium IDE's recording feature" [ref=f1e121]:
+                                - cell "Install Selenium IDE What is Selenium IDE ? Record and Playback using Selenium IDE Validating Elements using Selenium IDE Validating Elements using Assert Mechanism" [ref=f1e122]:
+                                  - list [ref=f1e123]:
+                                    - listitem [ref=f1e124]:
+                                      - link "Install Selenium IDE" [ref=f1e126] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/12-install-selenium-ide.html
+                                    - listitem [ref=f1e127]:
+                                      - link "What is Selenium IDE ?" [ref=f1e129] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/12-what-is-selenium-ide.html
+                                    - listitem [ref=f1e130]:
+                                      - link "Record and Playback using Selenium IDE" [ref=f1e132] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/11/14-record-and-playback-using-selenium.html
+                                    - listitem [ref=f1e133]:
+                                      - link "Validating Elements using Selenium IDE" [ref=f1e135] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/15-validating-elements-using-selenium.html
+                                    - listitem [ref=f1e136]:
+                                      - link "Validating Elements using Assert Mechanism" [ref=f1e137] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/16-validate-elements-using-assert.html
+                                - cell "Validating Elements using Verify Mechanism Viewing the source code of the steps recorded using Selenium IDE in our desired language What are Locators ? Different types of Locators to identify UI elements Tools in Selenium to find out the Locators Locate UI elements by ID" [ref=f1e138]:
+                                  - list [ref=f1e139]:
+                                    - listitem [ref=f1e140]:
+                                      - link "Validating Elements using Verify Mechanism" [ref=f1e142] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/17-validate-elements-using-verify.html
+                                    - listitem [ref=f1e143]:
+                                      - link "Viewing the source code of the steps recorded using Selenium IDE in our desired language" [ref=f1e144] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/18-viewing-source-code-of-steps.html
+                                    - listitem [ref=f1e145]:
+                                      - link "What are Locators ?" [ref=f1e147] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/19-what-are-locators.html
+                                    - listitem [ref=f1e148]:
+                                      - link "Different types of Locators to identify UI elements" [ref=f1e150] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/20-different-types-of-locators-to.html
+                                    - listitem [ref=f1e151]:
+                                      - link "Tools in Selenium to find out the Locators" [ref=f1e153] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/21-tools-in-selenium-to-find-out.html
+                                    - listitem [ref=f1e154]:
+                                      - link "Locate UI elements by ID" [ref=f1e156] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/22-locate-ui-elements-by-id.html
+                                - cell "Locate UI elements by Name Locate UI elements by Link Locate UI elements by XPath Locate UI elements by CSS Finding locators for UI elements using the Selenium IDE's recording feature" [ref=f1e157]:
+                                  - list [ref=f1e158]:
+                                    - listitem [ref=f1e159]:
+                                      - link "Locate UI elements by Name" [ref=f1e161] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/23-locate-ui-elements-by-name.html
+                                    - listitem [ref=f1e162]:
+                                      - link "Locate UI elements by Link" [ref=f1e164] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/24-locate-ui-elements-by-link.html
+                                    - listitem [ref=f1e165]:
+                                      - link "Locate UI elements by XPath" [ref=f1e167] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/25-locate-ui-elements-by-xpath.html
+                                    - listitem [ref=f1e168]:
+                                      - link "Locate UI elements by CSS" [ref=f1e170] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/26-locate-ui-elements-by-css.html
+                                    - listitem [ref=f1e171]:
+                                      - link "Finding locators for UI elements using the Selenium IDE's recording feature" [ref=f1e173] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2012/12/27-finding-locators-for-ui-elements.html
+                          - generic [ref=f1e175]:
+                            - generic:
+                              - generic:
+                                - iframe
+                          - generic [ref=f1e177]:
+                            - separator [ref=f1e178]
+                            - link [ref=f1e179] [cursor=pointer]:
+                              - /url: "#"
+                              - img [ref=f1e180]
+                          - table [ref=f1e183]:
+                            - rowgroup [ref=f1e184]:
+                              - row [ref=f1e185]:
+                                - cell [ref=f1e186]:
+                                  - list [ref=f1e187]:
+                                    - listitem [ref=f1e188]:
+                                      - link "Java for Selenium" [ref=f1e190] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/01/28-java-for-selenium.html
+                                    - listitem [ref=f1e191]:
+                                      - link "What is Java ?" [ref=f1e193] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/29-what-is-java.html
+                                    - listitem [ref=f1e194]:
+                                      - link "Install Java JDK" [ref=f1e196] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/30-install-java-jdk.html
+                                    - listitem [ref=f1e197]:
+                                      - link "Configure Java" [ref=f1e199] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/31-configure-java.html
+                                    - listitem [ref=f1e200]:
+                                      - link "A Simple Java Program" [ref=f1e202] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/32-simple-java-program.html
+                                    - listitem [ref=f1e203]:
+                                      - link "TextPad Editor Installation" [ref=f1e205] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/33-textpad-editor-installation.html
+                                    - listitem [ref=f1e206]:
+                                      - link "Write and execute Java Programs using TextPad tool" [ref=f1e208] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/34-write-and-execute-java-programs.html
+                                    - listitem [ref=f1e209]:
+                                      - link "Object Oriented Programming" [ref=f1e211] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/35-object-oriented-programming.html
+                                    - listitem [ref=f1e212]:
+                                      - link "First Simple Java Program" [ref=f1e214] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/36-first-simple-java-program.html
+                                    - listitem [ref=f1e215]:
+                                      - link "Second Simple Java Program" [ref=f1e217] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/37-second-simple-java-program.html
+                                    - listitem [ref=f1e218]:
+                                      - link "'int' data type" [ref=f1e220] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/38-int-data-type.html
+                                    - listitem [ref=f1e221]:
+                                      - link "'double' data type" [ref=f1e223] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/39-double-data-type.html
+                                    - listitem [ref=f1e224]:
+                                      - link "'long' data type" [ref=f1e226] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/40-long-data-type.html
+                                    - listitem [ref=f1e227]:
+                                      - link "'float' data type" [ref=f1e229] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/41-float-data-type.html
+                                    - listitem [ref=f1e230]:
+                                      - link "'char' data type" [ref=f1e232] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/42-char-data-type.html
+                                    - listitem [ref=f1e233]:
+                                      - link "'boolean' data type" [ref=f1e235] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/43-boolean-data-type.html
+                                    - listitem [ref=f1e236]:
+                                      - link "Assigning values to variables of different data type" [ref=f1e238] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/44-assigning-values-to-variables-of.html
+                                    - listitem [ref=f1e239]:
+                                      - link "Variable Declaration and Initialization" [ref=f1e241] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/45-variable-declaration-and.html
+                                    - listitem [ref=f1e242]:
+                                      - link "Scope of Variables" [ref=f1e244] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/46-scope-of-variables.html
+                                    - listitem [ref=f1e245]:
+                                      - link "Type conversion" [ref=f1e247] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/47-type-conversion.html
+                                    - listitem [ref=f1e248]:
+                                      - link "Arrays" [ref=f1e250] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/48-arrays.html
+                                    - listitem [ref=f1e251]:
+                                      - link "Arithmetic Operators" [ref=f1e253] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/49-arithmetic-operators.html
+                                    - listitem [ref=f1e254]:
+                                      - link "Relational Operators" [ref=f1e256] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/50-relational-operators.html
+                                    - listitem [ref=f1e257]:
+                                      - link "Boolean Logical Operators" [ref=f1e259] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/51-boolean-logical-operators.html
+                                    - listitem [ref=f1e260]:
+                                      - link "Assignment and '?' operator" [ref=f1e262] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/52-assignment-and-operator.html
+                                    - listitem [ref=f1e263]:
+                                      - link "Operator Precedence" [ref=f1e265] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/53-operator-precedence.html
+                                    - listitem [ref=f1e266]:
+                                      - link "'if' selection statements" [ref=f1e268] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/54-if-selection-statements.html
+                                    - listitem [ref=f1e269]:
+                                      - link "'switch' selection statements" [ref=f1e271] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/55-switch-selection-statements.html
+                                    - listitem [ref=f1e272]:
+                                      - link "'while' iteration statements" [ref=f1e274] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/56-while-iteration-statements.html
+                                    - listitem [ref=f1e275]:
+                                      - link "'do-while' iteration statements" [ref=f1e277] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/57-do-while-iteration-statements.html
+                                    - listitem [ref=f1e278]:
+                                      - link "'for' iterative statements" [ref=f1e280] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/58-for-iterative-statements.html
+                                    - listitem [ref=f1e281]:
+                                      - link "'break' jump statement" [ref=f1e283] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/59-break-jump-statement.html
+                                    - listitem [ref=f1e284]:
+                                      - link "'continue' jump statements" [ref=f1e286] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/60-continue-jump-statements.html
+                                    - listitem [ref=f1e287]:
+                                      - link "'class' concept" [ref=f1e289] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/61-class-concept.html
+                                    - listitem [ref=f1e290]:
+                                      - link "Install Eclipse IDE" [ref=f1e292] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/62-install-eclipse-ide.html
+                                    - listitem [ref=f1e293]:
+                                      - link "How to Launch Eclipse IDE" [ref=f1e295] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/63-how-to-launch-eclipse-ide.html
+                                    - listitem [ref=f1e296]:
+                                      - link "How to create projects in Eclipse IDE?" [ref=f1e298] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/64-how-to-create-projects-in-eclipse-ide.html
+                                    - listitem [ref=f1e299]:
+                                      - link "Run Java Programs in Eclipse IDE" [ref=f1e301] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/65-run-java-programs-in-eclipse-ide.html
+                                    - listitem [ref=f1e302]:
+                                      - link "'class' is a template for an 'object'" [ref=f1e304] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/66-class-is-template-for-object.html
+                                    - listitem [ref=f1e305]:
+                                      - link "Exporting a Java Project from Eclipse IDE" [ref=f1e307] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/67-exporting-java-project-from-eclipse.html
+                                    - listitem [ref=f1e308]:
+                                      - link "Importing a Java Project into Eclipse IDE" [ref=f1e310] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/68-importing-java-project-into-eclipse.html
+                                    - listitem [ref=f1e311]:
+                                      - link "Declaring 'object' as an instance of a 'class'" [ref=f1e313] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/69-declaring-object-as-instance-of-class.html
+                                    - listitem [ref=f1e314]:
+                                      - link "How to use dot(.) operator" [ref=f1e316] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/70-how-to-use-dot-operator.html
+                                    - listitem [ref=f1e317]:
+                                      - link "Methods" [ref=f1e319] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/71-methods.html
+                                    - listitem [ref=f1e320]:
+                                      - link "How does a method return a value ?" [ref=f1e322] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/72-how-does-method-return-value.html
+                                    - listitem [ref=f1e323]:
+                                      - link "How does a method intake parameters ?" [ref=f1e325] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/73-how-does-method-intake-parameters.html
+                                    - listitem [ref=f1e326]:
+                                      - link "Constructors" [ref=f1e328] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/74-constructors.html
+                                    - listitem [ref=f1e329]:
+                                      - link "'this' keyword" [ref=f1e331] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/75-this-keyword.html
+                                    - listitem [ref=f1e332]:
+                                      - link "Method Overloading" [ref=f1e334] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/76-method-overloading.html
+                                    - listitem [ref=f1e335]:
+                                      - link "'Constructor' Overloading" [ref=f1e337] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/77-constructor-overloading.html
+                                    - listitem [ref=f1e338]:
+                                      - link "Using 'objects' as parameters" [ref=f1e340] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/78-using-objects-as-parameters.html
+                                    - listitem [ref=f1e341]:
+                                      - link "Argument Passing" [ref=f1e343] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/79-argument-passing.html
+                                    - listitem [ref=f1e344]:
+                                      - link "Returning Objects" [ref=f1e346] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/80-returning-objects.html
+                                    - listitem [ref=f1e347]:
+                                      - link "Recursion" [ref=f1e349] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/81-recursion.html
+                                    - listitem [ref=f1e350]:
+                                      - link "'Public' Access specifier" [ref=f1e352] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/82-public-access-specifier.html
+                                    - listitem [ref=f1e353]:
+                                      - link "Default access specifier" [ref=f1e355] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/83-default-access-specifier.html
+                                    - listitem [ref=f1e356]:
+                                      - link "'private' access specifier" [ref=f1e358] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/84-private-access-specifier.html
+                                    - listitem [ref=f1e359]:
+                                      - link "'static' instance variables" [ref=f1e361] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/85-static-instance-variables.html
+                                    - listitem [ref=f1e362]:
+                                      - link "'static' methods" [ref=f1e364] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/86-static-methods.html
+                                    - listitem [ref=f1e365]:
+                                      - link "'static' methods can only call 'static' methods" [ref=f1e367] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/87-static-methods-can-only-call-static.html
+                                    - listitem [ref=f1e368]:
+                                      - link "'static' methods can only access 'static' variables" [ref=f1e370] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/88-static-methods-can-only-access.html
+                                    - listitem [ref=f1e371]:
+                                      - link "'static' methods cannot refer to 'this' keyword" [ref=f1e373] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/89-static-methods-cannot-refer-to-this.html
+                                    - listitem [ref=f1e374]:
+                                      - link "'static' block" [ref=f1e376] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/90-static-block.html
+                                    - listitem [ref=f1e377]:
+                                      - link "'final' instance variable" [ref=f1e379] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/91-final-instance-variable.html
+                                    - listitem [ref=f1e380]:
+                                      - link "'length' array attribute" [ref=f1e382] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/92-length-array-attribute.html
+                                    - listitem [ref=f1e383]:
+                                      - link "'Nested' classes" [ref=f1e385] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/93-nested-classes.html
+                                    - listitem [ref=f1e386]:
+                                      - link "'String' class" [ref=f1e388] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/94-string-class.html
+                                    - listitem [ref=f1e389]:
+                                      - link "Concatenate two string using '+' operator" [ref=f1e391] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/95-concatenate-two-string-using-operator.html
+                                    - listitem [ref=f1e392]:
+                                      - link "Using 'equals( )' method for comparing two strings" [ref=f1e394] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/96-using-equals-method-for-comparing.html
+                                    - listitem [ref=f1e395]:
+                                      - link "Using 'length( )' method for finding the length of a string" [ref=f1e397] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/97-using-length-method-for-finding.html
+                                    - listitem [ref=f1e398]:
+                                      - link "Using 'charAt( )' method to retrieve the character from string text" [ref=f1e400] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/98-using-charat-method-to-retrieve.html
+                                    - listitem [ref=f1e401]:
+                                      - link "String Arrays" [ref=f1e403] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/99-string-arrays.html
+                                    - listitem [ref=f1e404]:
+                                      - link "Inheritance" [ref=f1e406] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/100-inheritance.html
+                                    - listitem [ref=f1e407]:
+                                      - link "subclass cannot access private members of superclass" [ref=f1e409] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/101-subclass-cannot-access-private.html
+                                    - listitem [ref=f1e410]:
+                                      - link "Assigning subclass reference to superclass reference" [ref=f1e412] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/102-assigning-subclass-reference-to.html
+                                    - listitem [ref=f1e413]:
+                                      - link "Using 'super' keyword to access the instance variables of superclass" [ref=f1e415] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/103-using-super-keyword-to-access.html
+                                    - listitem [ref=f1e416]:
+                                      - link "Using 'super' keyword to access the methods of 'superclass'" [ref=f1e418] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/104-using-super-keyword-to-access.html
+                                    - listitem [ref=f1e419]:
+                                      - link "Calling 'Superclass' constructors using 'super' keyword" [ref=f1e421] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/105-calling-superclass-constructors.html
+                                    - listitem [ref=f1e422]:
+                                      - link "'Multilevel' Hierarchy" [ref=f1e424] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/106-multilevel-hierarchy.html
+                                    - listitem [ref=f1e425]:
+                                      - link "Using 'super' in Multilevel Hierarchy" [ref=f1e427] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/107-using-super-in-multilevel-hierarchy.html
+                                    - listitem [ref=f1e428]:
+                                      - link "Explicitly invoke Super class constructors" [ref=f1e430] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/108-explicitly-invoke-super-class.html
+                                    - listitem [ref=f1e431]:
+                                      - link "'Inheritance' and the order of executing constructors" [ref=f1e433] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/109-inheritance-and-order-of-executing.html
+                                    - listitem [ref=f1e434]:
+                                      - link "Method Overriding" [ref=f1e436] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/110-method-overriding.html
+                                - cell [ref=f1e437]:
+                                  - list [ref=f1e438]:
+                                    - listitem [ref=f1e439]:
+                                      - link "Dynamic Method Dispatch" [ref=f1e441] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/111-dynamic-method-dispatch.html
+                                    - listitem [ref=f1e442]:
+                                      - link "Abstract Classes" [ref=f1e444] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/112-abstract-classes.html
+                                    - listitem [ref=f1e445]:
+                                      - link "Prevent overriding using 'final' keyword" [ref=f1e447] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/113-prevent-overriding-using-final.html
+                                    - listitem [ref=f1e448]:
+                                      - link "Prevent Inheritance using 'final' keyword" [ref=f1e450] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/114-prevent-inheritance-using-final.html
+                                    - listitem [ref=f1e451]:
+                                      - link "Packages" [ref=f1e453] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/115-packages.html
+                                    - listitem [ref=f1e454]:
+                                      - link "'Package' and Access Protection" [ref=f1e456] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/116-package-and-access-protection.html
+                                    - listitem [ref=f1e457]:
+                                      - link "Importing Packages" [ref=f1e459] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/117-importing-packages.html
+                                    - listitem [ref=f1e460]:
+                                      - link "Interfaces" [ref=f1e462] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/118-interfaces.html
+                                    - listitem [ref=f1e463]:
+                                      - link "Class implementing multiple Interfaces" [ref=f1e465] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/119-class-implementing-multiple.html
+                                    - listitem [ref=f1e466]:
+                                      - link "Singe Interface implemented by multiple classes" [ref=f1e468] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/120-singe-interface-implemented-by.html
+                                    - listitem [ref=f1e469]:
+                                      - link "Superclass implementing an Interface and Subclass Inheriting it" [ref=f1e471] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/121-superclass-implementing-interface.html
+                                    - listitem [ref=f1e472]:
+                                      - link "Subclass implementing an Interface" [ref=f1e474] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/122-subclass-implementing-interface.html
+                                    - listitem [ref=f1e475]:
+                                      - link "Implementing the Interface containing variables" [ref=f1e477] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/123-implementing-interface-containing.html
+                                    - listitem [ref=f1e478]:
+                                      - link "Accessing the overriding method of sub-class using superclass object" [ref=f1e480] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/124-accessing-overiding-method-of-sub.html
+                                    - listitem [ref=f1e481]:
+                                      - link "Interface References" [ref=f1e483] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/125-interface-references.html
+                                    - listitem [ref=f1e484]:
+                                      - link "Abstract methods in Superclass must be implemented in Subclass" [ref=f1e486] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/126-abstract-methods-in-superclass-must.html
+                                    - listitem [ref=f1e487]:
+                                      - link "Objects can't be created for abstract Classes" [ref=f1e489] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/127-objects-cant-be-created-for.html
+                                    - listitem [ref=f1e490]:
+                                      - link "Abstract classes can partially implement the Interfaces" [ref=f1e492] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/128-abstract-classes-can-partially.html
+                                    - listitem [ref=f1e493]:
+                                      - link "Interface inheriting another Interface" [ref=f1e495] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/129-interface-inheriting-another.html
+                                    - listitem [ref=f1e496]:
+                                      - link "Exception Handling" [ref=f1e498] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/130-exception-handling.html
+                                    - listitem [ref=f1e499]:
+                                      - link "What happens when we don't handle an exception ?" [ref=f1e501] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/131-what-happens-when-we-dont-handle.html
+                                    - listitem [ref=f1e502]:
+                                      - link "How to handle an exception ?" [ref=f1e504] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/132-how-to-handle-exception.html
+                                    - listitem [ref=f1e505]:
+                                      - link "Using getChars( ) to extract more than one character from String Text" [ref=f1e507] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/133-using-getchars-to-extract-more-than.html
+                                    - listitem [ref=f1e508]:
+                                      - link "Using 'equalsIgnoreCase( )'" [ref=f1e510] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/134-using-equalsignorecase.html
+                                    - listitem [ref=f1e511]:
+                                      - link "Using startsWith( ) and endsWith( ) methods" [ref=f1e513] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/135-using-startswith-and-endswith.html
+                                    - listitem [ref=f1e514]:
+                                      - link "Using compareTo( ) method" [ref=f1e516] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/136-using-compareto-method.html
+                                    - listitem [ref=f1e517]:
+                                      - link "Using indexOf( ) method" [ref=f1e519] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/137-using-indexof-method.html
+                                    - listitem [ref=f1e520]:
+                                      - link "Using 'lastIndexOf( )' method" [ref=f1e522] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/138-using-lastindexof-method.html
+                                    - listitem [ref=f1e523]:
+                                      - link "Using 'substring( )' method" [ref=f1e525] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/139-using-substring-method.html
+                                    - listitem [ref=f1e526]:
+                                      - link "Using 'concat( )' method" [ref=f1e528] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/140-using-concat-method.html
+                                    - listitem [ref=f1e529]:
+                                      - link "Using 'replace( )' method" [ref=f1e531] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/141-using-replace-method.html
+                                    - listitem [ref=f1e532]:
+                                      - link "Using 'trim( )' method" [ref=f1e534] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/142-using-trim-method.html
+                                    - listitem [ref=f1e535]:
+                                      - link "Using 'toLowerCase( )' and 'toUpperCase( )' methods" [ref=f1e537] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/143-using-tolowercase-and-touppercase.html
+                                    - listitem [ref=f1e538]:
+                                      - link "StringBuffer class" [ref=f1e540] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/144-stringbuffer-class.html
+                                    - listitem [ref=f1e541]:
+                                      - link "Using 'length( )' method with StringBuffer" [ref=f1e543] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/145-using-length-method-with.html
+                                    - listitem [ref=f1e544]:
+                                      - link "Using 'charAt( )' method with StringBuffer" [ref=f1e546] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/146-using-charat-method-with.html
+                                    - listitem [ref=f1e547]:
+                                      - link "Using 'setCharAt( )' method with StringBuffer" [ref=f1e549] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/147-using-setcharat-method-with.html
+                                    - listitem [ref=f1e550]:
+                                      - link "Using 'getChars( )' method with StringBuffer" [ref=f1e552] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/148-using-getchars-method-with.html
+                                    - listitem [ref=f1e553]:
+                                      - link "Using append( ) method with StringBuffer" [ref=f1e555] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/149-using-append-method-with.html
+                                    - listitem [ref=f1e556]:
+                                      - link "Using 'insert( )' method with StringBuffer" [ref=f1e558] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/150-using-insert-method-with.html
+                                    - listitem [ref=f1e559]:
+                                      - link "Using 'reverse( )' method with StringBuffer" [ref=f1e561] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/151-using-reverse-method-with.html
+                                    - listitem [ref=f1e562]:
+                                      - link "Using 'delete( )' method with StringBuffer" [ref=f1e564] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/152-using-delete-method-with.html
+                                    - listitem [ref=f1e565]:
+                                      - link "Using 'deleteCharAt( )' method with StringBuffer" [ref=f1e567] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/153-using-deletecharat-method-with.html
+                                    - listitem [ref=f1e568]:
+                                      - link "Using 'replace( )' method with StringBuffer" [ref=f1e570] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/154-using-replace-method-with.html
+                                    - listitem [ref=f1e571]:
+                                      - link "Using 'substring( )' method with StringBuffer" [ref=f1e573] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/155-using-substring-method-with.html
+                                    - listitem [ref=f1e574]:
+                                      - link "Using 'indexOf( )' method with StringBuffer" [ref=f1e576] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/156-using-indexof-method-with.html
+                                    - listitem [ref=f1e577]:
+                                      - link "Using 'lastIndexOf( ) method with StringBuffer" [ref=f1e579] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2013/02/157-using-lastindexof-method-with.html
+                                    - listitem [ref=f1e580]:
+                                      - link "Using shortcuts for System.out.println( ) in Eclipse IDE" [ref=f1e582] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/158-using-shortcuts-for.html
+                                    - listitem [ref=f1e583]:
+                                      - link "Renaming Java Projects, Packages and Classes in Eclipse IDE" [ref=f1e585] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/159-reaming-java-projects-packages-and.html
+                                    - listitem [ref=f1e586]:
+                                      - link "Finding the Projects location in Eclipse IDE" [ref=f1e588] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/160-finding-projects-location-in.html
+                                    - listitem [ref=f1e589]:
+                                      - link "Deleting the Java Project from Eclipse IDE" [ref=f1e591] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/161-deleting-java-project-from-eclipse.html
+                                    - listitem [ref=f1e592]:
+                                      - link "Exporting a Project, Deleting it from Eclipse IDE and importing it" [ref=f1e594] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/162-exporting-project-deleting-it-from.html
+                                    - listitem [ref=f1e595]:
+                                      - link "Deleting the Java Project from the Eclipse IDE workspace path" [ref=f1e597] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/163-deleting-java-project-from-eclipse.html
+                                    - listitem [ref=f1e598]:
+                                      - link "Debugging the Java Programs in Eclipse IDE" [ref=f1e600] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/164-debugging-java-programs-in-eclipse.html
+                                    - listitem [ref=f1e601]:
+                                      - link "Java Keywords in Eclipse IDE" [ref=f1e603] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/165-java-keywords-are-highlighted-in.html
+                                    - listitem [ref=f1e604]:
+                                      - link "Changing Font, Font Style and Font Size in Eclipse IDE" [ref=f1e606] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/166-changing-font-font-style-and-font.html
+                                    - listitem [ref=f1e607]:
+                                      - link "Understanding API (Application Programming Interface)" [ref=f1e609] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/167-understanding-api-application.html
+                                    - listitem [ref=f1e610]:
+                                      - link "Understanding Java API" [ref=f1e612] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/168-understanding-java-api.html
+                                    - listitem [ref=f1e613]:
+                                      - link "Java API as JRE System Library in Eclipse IDE" [ref=f1e615] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/169-implementation-of-java-api-in.html
+                                    - listitem [ref=f1e616]:
+                                      - link "Understanding the JRE System Library in Eclipse IDE" [ref=f1e618] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/170-understanding-jre-system-library-in.html
+                                    - listitem [ref=f1e619]:
+                                      - link "Creating .jar file using Eclipse IDE" [ref=f1e621] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/171-creating-jar-file-using-eclipse-ide.html
+                                    - listitem [ref=f1e622]:
+                                      - link "Using 'length' array attribute with 2 dimensional arrays" [ref=f1e624] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/172-using-length-array-attribute-with-2.html
+                                    - listitem [ref=f1e625]:
+                                      - link "Using 'length' array attribute with 3 dimensional arrays" [ref=f1e627] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/173-using-length-array-attribute-with-3.html
+                                    - listitem [ref=f1e628]:
+                                      - link "'double' data type arrays" [ref=f1e630] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/174-double-data-type-arrays.html
+                                    - listitem [ref=f1e631]:
+                                      - link "'char' data type arrays" [ref=f1e633] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/175-char-data-type-arrays.html
+                                    - listitem [ref=f1e634]:
+                                      - link "'String' data type arrays" [ref=f1e636] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/176-string-data-type-arrays.html
+                                    - listitem [ref=f1e637]:
+                                      - link "Defining and Creating Objects" [ref=f1e639] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/177-defining-and-creating-objects.html
+                                    - listitem [ref=f1e640]:
+                                      - link "Assigning 'Object Reference' variable" [ref=f1e642] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/178-assigning-object-reference-variables.html
+                                    - listitem [ref=f1e643]:
+                                      - link "Data Types in Java" [ref=f1e645] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/179-data-types-in-java.html
+                                    - listitem [ref=f1e646]:
+                                      - link "Primitive Data Types" [ref=f1e648] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/180-primitive-data-types.html
+                                    - listitem [ref=f1e649]:
+                                      - link "Non-Primitive Data Types" [ref=f1e651] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/181-non-primitive-data-types.html
+                                    - listitem [ref=f1e652]:
+                                      - link "Local Variables and Instance Variables" [ref=f1e654] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/182-local-variables-and-instance.html
+                                    - listitem [ref=f1e655]:
+                                      - link "Java and Windows Command Prompt" [ref=f1e657] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/183-java-and-windows-command-prompt.html
+                                    - listitem [ref=f1e658]:
+                                      - link "For-each loop" [ref=f1e660] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/184-for-each-loop.html
+                                    - listitem [ref=f1e661]:
+                                      - link "varargs 'Variable Legth Arguments'" [ref=f1e663] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/185-varargs-variable-length-arguments.html
+                                    - listitem [ref=f1e664]:
+                                      - link "varargs parameter must be the last parameter in the method" [ref=f1e666] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/186-varargs-parameter-must-be-last.html
+                                    - listitem [ref=f1e667]:
+                                      - link "varargs parameter must be used only once in a method" [ref=f1e669] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/187-varargs-parameter-must-be-used-only.html
+                                    - listitem [ref=f1e670]:
+                                      - link "Creating more than one Class in a single Java Class file" [ref=f1e672] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/06/188-creating-more-than-one-class-in.html
+                                    - listitem [ref=f1e673]:
+                                      - link "Objects cant be created for Abstract Classes" [ref=f1e675] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/189-objects-cant-be-created-for.html
+                                    - listitem [ref=f1e676]:
+                                      - link "Accessing members of Abstract Class using its subclass object" [ref=f1e678] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/190-accessing-members-of-abstract-class.html
+                                    - listitem [ref=f1e679]:
+                                      - link "Assigning the SubClass reference to SuperClass and accessing members" [ref=f1e681] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/191-assigning-subclass-reference-to.html
+                                    - listitem [ref=f1e682]:
+                                      - link "Defining objects for Abstract Classes" [ref=f1e684] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/192-defining-objects-for-abstract.html
+                                    - listitem [ref=f1e685]:
+                                      - link "Defining objects for Abstract Classes for accessing its abstract methods" [ref=f1e687] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/193-defining-objects-for-abstract.html
+                                - cell [ref=f1e688]:
+                                  - list [ref=f1e689]:
+                                    - listitem [ref=f1e690]:
+                                      - link "Creating a sub class using Eclipse IDE options" [ref=f1e692] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/194-creating-sub-class-using-eclipse.html
+                                    - listitem [ref=f1e693]:
+                                      - link "Java Literals" [ref=f1e695] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/195-java-literals.html
+                                    - listitem [ref=f1e696]:
+                                      - link "Numeric Literals" [ref=f1e698] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/196-numeric-literals.html
+                                    - listitem [ref=f1e699]:
+                                      - link "Storing Integer Literals in long data type variables" [ref=f1e701] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/197-storing-integer-literals-in-long.html
+                                    - listitem [ref=f1e702]:
+                                      - link "Storing Floating Point Literals in float data type variables" [ref=f1e704] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/198-storing-floating-point-literals-in.html
+                                    - listitem [ref=f1e705]:
+                                      - link "Using Character Escape Sequences in String Literals" [ref=f1e707] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/199-using-character-escape-sequences-in.html
+                                    - listitem [ref=f1e708]:
+                                      - link "The Object Class" [ref=f1e710] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/200-object-class.html
+                                    - listitem [ref=f1e711]:
+                                      - link "Object Class Methods" [ref=f1e713] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/201-object-class-methods.html
+                                    - listitem [ref=f1e714]:
+                                      - link "Using equals( ) method of Object Class" [ref=f1e716] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/202-equals-method-of-object-class.html
+                                    - listitem [ref=f1e717]:
+                                      - link "Printing an Object" [ref=f1e719] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/203-printing-object.html
+                                    - listitem [ref=f1e720]:
+                                      - link "Using toString( ) method of Object Class" [ref=f1e722] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/204-using-tostring-method-of-object.html
+                                    - listitem [ref=f1e723]:
+                                      - link "Using toString( ) method of Object Class to print the values of the object" [ref=f1e725] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/205-using-tostring-method-of-object.html
+                                    - listitem [ref=f1e726]:
+                                      - link "Using getClass( ) method of Object Class" [ref=f1e728] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/206-using-getclass-method-of-object.html
+                                    - listitem [ref=f1e729]:
+                                      - link "Upcasting" [ref=f1e731] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/207-upcasting.html
+                                    - listitem [ref=f1e732]:
+                                      - link "Cannot Cast objects of Classes which are at same level in hierarchy" [ref=f1e734] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/208-you-cannot-cast-objects-of-classes.html
+                                    - listitem [ref=f1e735]:
+                                      - link "Downcasting" [ref=f1e737] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/209-downcasting.html
+                                    - listitem [ref=f1e738]:
+                                      - link "instanceof operator" [ref=f1e740] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/210-instanceof-operator.html
+                                    - listitem [ref=f1e741]:
+                                      - link "Creating duplicate Classes in same project" [ref=f1e743] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/211-creating-duplicate-classes-in-same.html
+                                    - listitem [ref=f1e744]:
+                                      - link "Default Package" [ref=f1e746] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/07/212-default-package.html
+                                    - listitem [ref=f1e747]:
+                                      - link "Creating Hierarchy of Packages" [ref=f1e749] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/213-creating-hierarchy-of-packages.html
+                                    - listitem [ref=f1e750]:
+                                      - link "Understanding the Packages in Java API" [ref=f1e752] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/214-understanding-packages-in-java-api.html
+                                    - listitem [ref=f1e753]:
+                                      - link "Renaming the packages in Hierarchy" [ref=f1e755] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/215-renaming-packages-in-hiearchy.html
+                                    - listitem [ref=f1e756]:
+                                      - link "Interface implemented methods must be declared as public" [ref=f1e758] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/216-interface-implemented-methods-must.html
+                                    - listitem [ref=f1e759]:
+                                      - link "Implementing the Nested Interfaces" [ref=f1e761] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/217-implementing-nested-interfaces.html
+                                    - listitem [ref=f1e762]:
+                                      - link "Exception is an Object" [ref=f1e764] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/218-exception-is-object.html
+                                    - listitem [ref=f1e765]:
+                                      - link "Exception Hierarchy" [ref=f1e767] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/219-exception-hierarchy.html
+                                    - listitem [ref=f1e768]:
+                                      - link "Catching exceptions using Throwable Class" [ref=f1e770] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/220-catching-exceptions-using-throwable.html
+                                    - listitem [ref=f1e771]:
+                                      - link "Catching exceptions using Exception Class" [ref=f1e773] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/221-catching-exceptions-using-exception.html
+                                    - listitem [ref=f1e774]:
+                                      - link "Catching arithmetic exceptions using ArithmeticException Class" [ref=f1e776] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/222-catching-arithmetic-exceptions.html
+                                    - listitem [ref=f1e777]:
+                                      - link "Handling ArrayIndexOutOfBoundsException" [ref=f1e779] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/223-handling-arrayindexoutofboundsexcep.html
+                                    - listitem [ref=f1e780]:
+                                      - link "Using multiple catch blocks" [ref=f1e782] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/224-using-multiple-catch-blocks.html
+                                    - listitem [ref=f1e783]:
+                                      - link "Order of catch blocks" [ref=f1e785] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/225-order-of-catch-blocks.html
+                                    - listitem [ref=f1e786]:
+                                      - link "Handling exceptions using Exception Class for safe side" [ref=f1e788] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/226-handling-exceptions-using-exception.html
+                                    - listitem [ref=f1e789]:
+                                      - link "Methods of Throwable Class" [ref=f1e791] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/227-methods-of-throwable-class.html
+                                    - listitem [ref=f1e792]:
+                                      - link "Printing the exception details in different ways" [ref=f1e794] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/228-printing-exception-details-in.html
+                                    - listitem [ref=f1e795]:
+                                      - link "Using getMessage( ) of Throwable Class" [ref=f1e797] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/229-using-getmessage-of-throwable-class.html
+                                    - listitem [ref=f1e798]:
+                                      - link "Using toString( ) of Throwable Class" [ref=f1e800] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/230-using-tostring-of-throwable-class.html
+                                    - listitem [ref=f1e801]:
+                                      - link "Using printStackTrace( ) of Throwable Class" [ref=f1e803] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/231-using-printstacktrace-of-throwable.html
+                                    - listitem [ref=f1e804]:
+                                      - link "Using throw keyword in exception handling" [ref=f1e806] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/232-using-throw-keyword-in-exception.html
+                                    - listitem [ref=f1e807]:
+                                      - link "Checked Exceptions" [ref=f1e809] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/233-checked-exceptions.html
+                                    - listitem [ref=f1e810]:
+                                      - link "Using throws keyword in exception handling" [ref=f1e812] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/234-using-throws-in-exception-handling.html
+                                    - listitem [ref=f1e813]:
+                                      - link "Handling FileNotFoundException" [ref=f1e815] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/235-handling-filenotfoundexception.html
+                                    - listitem [ref=f1e816]:
+                                      - link "Using finally in exception handling" [ref=f1e818] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/236-using-finally-in-exception-handling.html
+                                    - listitem [ref=f1e819]:
+                                      - link "Using finally block immediately after the try block" [ref=f1e821] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/237-using-finally-block-immediately.html
+                                    - listitem [ref=f1e822]:
+                                      - link "Nested try catch blocks" [ref=f1e824] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/238-nested-try-catch-blocks.html
+                                    - listitem [ref=f1e825]:
+                                      - link "Catching Multiple Exceptions in a single catch block" [ref=f1e827] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/239-catching-multiple-exceptions-is.html
+                                    - listitem [ref=f1e828]:
+                                      - link "Using Programmatic Method instead of Exception Handling" [ref=f1e830] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/240-using-programmatic-method-instead.html
+                                    - listitem [ref=f1e831]:
+                                      - link "Wrapper Classes" [ref=f1e833] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/241-wrapper-classes.html
+                                    - listitem [ref=f1e834]:
+                                      - link "Integer Wrapper Class" [ref=f1e836] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/242-integer-wrapper-class.html
+                                    - listitem [ref=f1e837]:
+                                      - link "Byte Wrapper Class" [ref=f1e839] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/243-byte-wrapper-class.html
+                                    - listitem [ref=f1e840]:
+                                      - link "Short Wrapper Class" [ref=f1e842] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/244-short-wrapper-class.html
+                                    - listitem [ref=f1e843]:
+                                      - link "Long Wrapper Class" [ref=f1e845] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/245-long-wrapper-class.html
+                                    - listitem [ref=f1e846]:
+                                      - link "Float Wrapper Class" [ref=f1e848] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/246-float-wrapper-class.html
+                                    - listitem [ref=f1e849]:
+                                      - link "Double Wrapper Class" [ref=f1e851] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/247-double-wrapper-class.html
+                                    - listitem [ref=f1e852]:
+                                      - link "Character Wrapper Class" [ref=f1e854] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/248-character-wrapper-class.html
+                                    - listitem [ref=f1e855]:
+                                      - link "Boolean Wrapper Class" [ref=f1e857] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/249-boolean-wrapper-class.html
+                                    - listitem [ref=f1e858]:
+                                      - link "Boxing and UnBoxing" [ref=f1e860] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/250-boxing-and-unboxing.html
+                                    - listitem [ref=f1e861]:
+                                      - link "AutoBoxing" [ref=f1e863] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/251-autoboxing.html
+                                    - listitem [ref=f1e864]:
+                                      - link "Auto-UnBoxing" [ref=f1e866] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/252-auto-unboxing.html
+                                    - listitem [ref=f1e867]:
+                                      - link "Implementing Auto-Boxing and Auto-UnBoxing in Methods" [ref=f1e869] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/253-implementing-autoboxing-in-methods.html
+                                    - listitem [ref=f1e870]:
+                                      - link "Implementing Auto-Boxing and Auto-UnBoxing in expressions" [ref=f1e872] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/254-implementing-autoboxing-and-auto.html
+                                    - listitem [ref=f1e873]:
+                                      - link "Compiler Compliance Level in Eclipse IDE" [ref=f1e875] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/255-compiler-compliance-level-in.html
+                                    - listitem [ref=f1e876]:
+                                      - link "Object Arrays" [ref=f1e878] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/256-object-arrays.html
+                                    - listitem [ref=f1e879]:
+                                      - link "Files" [ref=f1e881] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/257-files.html
+                                    - listitem [ref=f1e882]:
+                                      - link "Creating a file using createNewFile( ) method" [ref=f1e884] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/258-creating-file-using-createnewfile.html
+                                    - listitem [ref=f1e885]:
+                                      - link "Creating files in your Project Workspace" [ref=f1e887] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/259-creating-files-in-your-project.html
+                                    - listitem [ref=f1e888]:
+                                      - link "Creating folders using mkdir( ) method" [ref=f1e890] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/260-creating-folders-using-mkdir-method.html
+                                    - listitem [ref=f1e891]:
+                                      - link "Using getPath( ) and getAbsolutePath( ) methods" [ref=f1e893] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/261-using-getpath-and-getabsolutepath.html
+                                    - listitem [ref=f1e894]:
+                                      - link "Using exists( ) method" [ref=f1e896] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/262-using-exists-method.html
+                                    - listitem [ref=f1e897]:
+                                      - link "Methods of File Class" [ref=f1e899] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/263-methods-of-file-class.html
+                                    - listitem [ref=f1e900]:
+                                      - link "I/O Streams" [ref=f1e902] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/264-io-streams.html
+                                    - listitem [ref=f1e903]:
+                                      - link "Reading text file using read( ) method of FileReader I/O Class" [ref=f1e905] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/265-reading-text-file-using-read-method.html
+                                    - listitem [ref=f1e906]:
+                                      - link "Writing text to a file using write( ) method of FileWriter I/O Class" [ref=f1e908] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/266-writing-text-to-file-using-write.html
+                                    - listitem [ref=f1e909]:
+                                      - link "Append text in a file using append( ) method of FileWriter I/O Class" [ref=f1e911] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/267-append-text-in-file-using-append.html
+                                    - listitem [ref=f1e912]:
+                                      - link "Using FileInputStream I/O Class" [ref=f1e914] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/268-using-fileinputstream-io-class.html
+                                    - listitem [ref=f1e915]:
+                                      - link "Using FileOutputSteam I/O Class" [ref=f1e917] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/269-using-fileoutputstream-io-class.html
+                                    - listitem [ref=f1e918]:
+                                      - link "Reducing the object creation statements" [ref=f1e920] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/270-reducing-object-creation-statements.html
+                                    - listitem [ref=f1e921]:
+                                      - link "Using PrintStream I/O Class" [ref=f1e923] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/271-using-printstream-io-class.html
+                                    - listitem [ref=f1e924]:
+                                      - link "System.out.println( )" [ref=f1e926] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/08/272-systemoutprintln.html
+                                    - listitem [ref=f1e927]:
+                                      - link "static import" [ref=f1e929] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/09/273-static-import.html
+                                    - listitem [ref=f1e930]:
+                                      - link "Java auto imports all the classes in java.lang package" [ref=f1e932] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2014/09/274-java-auto-imports-all-classes-in.html
+                          - generic [ref=f1e934]:
+                            - generic:
+                              - generic:
+                                - iframe
+                          - generic [ref=f1e936]:
+                            - separator [ref=f1e937]
+                            - link [ref=f1e938] [cursor=pointer]:
+                              - /url: "#"
+                              - img [ref=f1e939]
+                          - table [ref=f1e942]:
+                            - rowgroup [ref=f1e943]:
+                              - row [ref=f1e944]:
+                                - cell [ref=f1e945]:
+                                  - list [ref=f1e946]:
+                                    - listitem [ref=f1e947]:
+                                      - link "Introduction to Selenium WebDriver" [ref=f1e949] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/275-introduction-to-selenium-webdriver.html
+                                    - listitem [ref=f1e950]:
+                                      - link "Downloading the Selenium WebDriver" [ref=f1e952] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/276-downloading-selenium-webdriver.html
+                                    - listitem [ref=f1e953]:
+                                      - link "Configuring Projects in Eclipse IDE to work with Selenium WebDriver" [ref=f1e955] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/277-configuring-projects-in-eclipse-ide.html
+                                    - listitem [ref=f1e956]:
+                                      - link "Is Selenium Server required by Selenium WebDriver ?" [ref=f1e958] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/278-is-selenium-server-required-by.html
+                                    - listitem [ref=f1e959]:
+                                      - link "Selenium RC versus Selenium Web Driver" [ref=f1e961] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/279-selenium-rc-versus-selenium-web.html
+                                    - listitem [ref=f1e962]:
+                                      - link "Create a JUnit Selenium WebDriver Test using Selenium IDE" [ref=f1e964] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/280-create-junit-selenium-webdriver.html
+                                    - listitem [ref=f1e965]:
+                                      - link "Ensure compatible Firefox Browser is installed" [ref=f1e967] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/281-ensure-compatible-firefox-browser.html
+                                    - listitem [ref=f1e968]:
+                                      - link "Run the Created Selenium WebDriver Test" [ref=f1e970] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/282-run-created-selenium-webdriver-test.html
+                                    - listitem [ref=f1e971]:
+                                      - link "Introduction to JUnit" [ref=f1e973] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/283-introduction-to-junit.html
+                                    - listitem [ref=f1e974]:
+                                      - link "Using JUnit annotation in our Selenium WebDriver Tests" [ref=f1e976] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/284-using-junit-annotation-in-our.html
+                                    - listitem [ref=f1e977]:
+                                      - link "Eclipse Automatically adds the Package Name into the newly created Java Class" [ref=f1e979] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/285-eclipse-automatically-adds-package.html
+                                    - listitem [ref=f1e980]:
+                                      - link "Writing Selenium WebDriver Test on our own" [ref=f1e982] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/286-writing-selenium-webdriver-test-on.html
+                                    - listitem [ref=f1e983]:
+                                      - link "Implementing JUnit Annotations" [ref=f1e985] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/287-implementing-junit-annotations.html
+                                    - listitem [ref=f1e986]:
+                                      - link "WebDriver Class and its Predefined Methods" [ref=f1e988] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/288-webdriver-class-and-its-predefined.html
+                                    - listitem [ref=f1e989]:
+                                      - link "'get( )' - Selenium WebDriver method to open the specified URL page" [ref=f1e991] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/289-get-selenium-webdriver-method-to.html
+                                    - listitem [ref=f1e992]:
+                                      - link "manage( ).window( ).maximize( ) - to maximize the Browser window" [ref=f1e994] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/290-manage-window-maximize-to-maximize.html
+                                    - listitem [ref=f1e995]:
+                                      - link "manage( ).window( ).setSize( ) - to resize the Browser window" [ref=f1e997] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/291-manage-window-setsize-to-resize.html
+                                    - listitem [ref=f1e998]:
+                                      - link "Using Thread.sleep(Millie Seconds) to pause the execution" [ref=f1e1000] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/292-using-threadsleepmillie-seconds-to.html
+                                    - listitem [ref=f1e1001]:
+                                      - link "quit( ) - Selenium WebDriver method for closing the Test Browser window" [ref=f1e1003] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/293-quit-selenium-webdriver-method-for.html
+                                    - listitem [ref=f1e1004]:
+                                      - link "What are Locators ?" [ref=f1e1006] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/294-what-are-locators.html
+                                    - listitem [ref=f1e1007]:
+                                      - link "Different Types of Locators to identify UI elements" [ref=f1e1009] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/295-different-types-of-locators-to.html
+                                    - listitem [ref=f1e1010]:
+                                      - link "Tools in Selenium to find out the locators" [ref=f1e1012] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/296-tools-in-selenium-to-find-out.html
+                                    - listitem [ref=f1e1013]:
+                                      - link "Locate UI elements by ID" [ref=f1e1015] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/297-locate-ui-elements-by-id.html
+                                    - listitem [ref=f1e1016]:
+                                      - link "Locate UI elements by Name" [ref=f1e1018] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/298-locate-ui-elements-by-name.html
+                                    - listitem [ref=f1e1019]:
+                                      - link "Locate UI elements by Link" [ref=f1e1021] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/299-locate-ui-elements-by-link.html
+                                    - listitem [ref=f1e1022]:
+                                      - link "Locate UI elements by XPath" [ref=f1e1024] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/300-locate-ui-elements-by-xpath.html
+                                    - listitem [ref=f1e1025]:
+                                      - link "Locate UI elements by CSS" [ref=f1e1027] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/301-locate-ui-elements-by-css.html
+                                    - listitem [ref=f1e1028]:
+                                      - link "Finding locators for UI elements using the Selenium IDEs recording feature" [ref=f1e1030] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/302-finding-locators-for-ui-elements.html
+                                    - listitem [ref=f1e1031]:
+                                      - link "click( ) - predefined method for clicking a Link" [ref=f1e1033] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/303-click-predefined-method-for.html
+                                    - listitem [ref=f1e1034]:
+                                      - link "click( ) - predefined method for clicking a Button" [ref=f1e1036] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/304-click-predefined-method-for.html
+                                    - listitem [ref=f1e1037]:
+                                      - link "Using sendKeys( ) predefined method for entering text" [ref=f1e1039] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/305-using-sendkeys-predefined-method.html
+                                    - listitem [ref=f1e1040]:
+                                      - link "Using click( ) - predefined method to select a radio button" [ref=f1e1042] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/306-using-click-predefined-method-to.html
+                                    - listitem [ref=f1e1043]:
+                                      - link "Using click( ) predefined method for selecting a check box option" [ref=f1e1045] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/307-using-click-predefined-method-for.html
+                                    - listitem [ref=f1e1046]:
+                                      - link "Using sendKeys( ) predefined method to select a list item from the drop down list" [ref=f1e1048] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/308-using-sendkeys-predefined-method-to.html
+                                    - listitem [ref=f1e1049]:
+                                      - link "Using getText( ) to retrieve any elements Text" [ref=f1e1051] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/309-using-gettext-to-retrieve-any.html
+                                    - listitem [ref=f1e1052]:
+                                      - link "Using getPageSource( ) method" [ref=f1e1054] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/310-using-getpagesource-method.html
+                                    - listitem [ref=f1e1055]:
+                                      - link "Using getTitle( ) method for retrieving the Title of the page" [ref=f1e1057] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/311-using-gettitle-method-for.html
+                                    - listitem [ref=f1e1058]:
+                                      - link "Using getAttribute(\"value\") method for retrieving text from the text fields" [ref=f1e1060] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/312-using-getattributevalue-method-for.html
+                                    - listitem [ref=f1e1061]:
+                                      - link "Using isDisplayed( ) to verify whether an element is available" [ref=f1e1063] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/313-using-isdisplayed-to-verify-whether.html
+                                    - listitem [ref=f1e1064]:
+                                      - link "Using FirefoxDriver for running Selenium WebDriver Automation Tests on Firefox Browser" [ref=f1e1066] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/314-using-firefoxdriver-for-running.html
+                                    - listitem [ref=f1e1067]:
+                                      - link "Using ChromeDriver for Running our Tests on Chrome Browser" [ref=f1e1069] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/315-using-chromedriver-for-running-our.html
+                                    - listitem [ref=f1e1070]:
+                                      - link "Using InternetExplorerDriver for Running our Tests on Internet Explorer Browser" [ref=f1e1072] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/316-using-internetexplorerdriver-for.html
+                                    - listitem [ref=f1e1073]:
+                                      - link "View the source code generated by Selenium IDE in Selenium WebDriver format" [ref=f1e1075] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/317-view-source-code-generated-by.html
+                                    - listitem [ref=f1e1076]:
+                                      - link "Renaming the Projects and its items using Eclipse IDE 'Refactor' option" [ref=f1e1078] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/318-renaming-projects-and-its-items.html
+                                    - listitem [ref=f1e1079]:
+                                      - link "Refactoring the Selenium Automation Code" [ref=f1e1081] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/319-refactoring-selenium-automation-code.html
+                                    - listitem [ref=f1e1082]:
+                                      - link "Identifying few sample real time tests for implementing the Refactoring concept" [ref=f1e1084] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/320-identifying-few-sample-real-time.html
+                                - cell [ref=f1e1085]:
+                                  - list [ref=f1e1086]:
+                                    - listitem [ref=f1e1087]:
+                                      - link "Non-Refactored Selenium Automation code for the tests identified in previous post" [ref=f1e1089] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/321-non-refactored-selenium-automation.html
+                                    - listitem [ref=f1e1090]:
+                                      - link "Only one test should be written inside a single test method" [ref=f1e1092] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/322-only-one-test-should-be-written.html
+                                    - listitem [ref=f1e1093]:
+                                      - link "Using @BeforeClass and @AfterClass JUnit Annotations" [ref=f1e1095] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/323-using-beforeclass-and-afterclass.html
+                                    - listitem [ref=f1e1096]:
+                                      - link "Refactoring the Selenium Automation code to make it readable" [ref=f1e1098] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/324-refactoring-selenium-automation.html
+                                    - listitem [ref=f1e1099]:
+                                      - link "Upgrading Selenium WebDriver" [ref=f1e1101] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/325-upgrading-selenium-webdriver.html
+                                    - listitem [ref=f1e1102]:
+                                      - link "HTML BASICS" [ref=f1e1104] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/326-html-basics.html
+                                    - listitem [ref=f1e1105]:
+                                      - link "Introduction to XPath" [ref=f1e1107] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/327-introduction-to-xpath.html
+                                    - listitem [ref=f1e1108]:
+                                      - link "Understanding the hierarchy of HTML Source" [ref=f1e1110] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/328-understanding-hierarchy-of-html.html
+                                    - listitem [ref=f1e1111]:
+                                      - link "Parse the HTML Source using its hierarchy and find XPath path" [ref=f1e1113] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/329-parse-html-source-using-its.html
+                                    - listitem [ref=f1e1114]:
+                                      - link "Different types of Nodes in HTML" [ref=f1e1116] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/330-different-types-of-nodes-in-html.html
+                                    - listitem [ref=f1e1117]:
+                                      - link "Locate the Element Nodes using Relative XPath" [ref=f1e1119] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/331-locate-element-nodes-using-relative.html
+                                    - listitem [ref=f1e1120]:
+                                      - link "XPath Functions" [ref=f1e1122] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/332-xpath-functions.html
+                                    - listitem [ref=f1e1123]:
+                                      - link "last( ) - XPath Function" [ref=f1e1125] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/333-last-xpath-function.html
+                                    - listitem [ref=f1e1126]:
+                                      - link "position( ) - XPath function" [ref=f1e1128] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/334-position-xpath-function.html
+                                    - listitem [ref=f1e1129]:
+                                      - link "contains( ) - XPath function" [ref=f1e1131] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/335-contains-xpath-function.html
+                                    - listitem [ref=f1e1132]:
+                                      - link "starts-with( ) XPath Function" [ref=f1e1134] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/336-starts-with-xpath-function.html
+                                    - listitem [ref=f1e1135]:
+                                      - link "Other XPath Functions" [ref=f1e1137] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/337-other-xpath-functions.html
+                                    - listitem [ref=f1e1138]:
+                                      - link "XPath Operators" [ref=f1e1140] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/338-xpath-operators.html
+                                    - listitem [ref=f1e1141]:
+                                      - link "Wild Cards usage in XPath" [ref=f1e1143] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/339-wild-cards-usage-in-xpath.html
+                                    - listitem [ref=f1e1144]:
+                                      - link "Using node( ) wild card in XPath Statements" [ref=f1e1146] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/340-using-node-wild-card-in-xpath.html
+                                    - listitem [ref=f1e1147]:
+                                      - link "Using * wild card in XPath Statements" [ref=f1e1149] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/341-using-wild-card-in-xpath-statements.html
+                                    - listitem [ref=f1e1150]:
+                                      - link "Using | to combine XPath Statements" [ref=f1e1152] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/342-using-to-combine-xpath-statements.html
+                                    - listitem [ref=f1e1153]:
+                                      - link "XPath Optimization" [ref=f1e1155] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/343-xpath-optimization.html
+                                    - listitem [ref=f1e1156]:
+                                      - link "XPath Optimization Strategy One - Use the id attribute if available for the element but not used in XPath Statement" [ref=f1e1158] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/344-xpath-optimization-strategy-one-use.html
+                                    - listitem [ref=f1e1159]:
+                                      - link "XPath Optimization Strategy Two - Use the combination of attributes to make the XPath more specific" [ref=f1e1161] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/345-xpath-optimization-strategy-two-use.html
+                                    - listitem [ref=f1e1162]:
+                                      - link "XPath Optimization Strategy Three - If there is really nothing to distinguish find the first unique element from its siblings and add the index value to it" [ref=f1e1164] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/346-xpath-optimization-strategy-three.html
+                                    - listitem [ref=f1e1165]:
+                                      - link "XPath Optimization Strategy Four - Use Relative XPath Statements instead of Absolute XPath Statements" [ref=f1e1167] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/347-xpath-optimization-strategy-four.html
+                                    - listitem [ref=f1e1168]:
+                                      - link "Practice XPath" [ref=f1e1170] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/348-practice-xpath.html
+                                    - listitem [ref=f1e1171]:
+                                      - link "Easy and Regular way of finding XPath Statements for Elements" [ref=f1e1173] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/349-easy-and-regular-way-of-finding.html
+                                    - listitem [ref=f1e1174]:
+                                      - link "Typing the Text into Text box by Locating the Text Box field with XPath Statement" [ref=f1e1176] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/350-typing-text-into-text-box-by.html
+                                    - listitem [ref=f1e1177]:
+                                      - link "Using isSelected( ) predefined method to get the status of the radio buttons and check box options" [ref=f1e1179] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/351-using-isselected-predefined-method.html
+                                    - listitem [ref=f1e1180]:
+                                      - link "Selecting values from the Drop down list by locating the Drop down field using XPath Statement" [ref=f1e1182] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/352-selecting-values-from-drop-down.html
+                                    - listitem [ref=f1e1183]:
+                                      - link "Clicking the Link by locating it using XPath Statement" [ref=f1e1185] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/353-clicking-link-by-locating-it-using.html
+                                    - listitem [ref=f1e1186]:
+                                      - link "Clicking the Button by locating it using XPath statement" [ref=f1e1188] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/354-clicking-button-by-locating-it.html
+                                    - listitem [ref=f1e1189]:
+                                      - link "Introduction to CSS selectors" [ref=f1e1191] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/355-introduction-to-css-selectors.html
+                                    - listitem [ref=f1e1192]:
+                                      - link "html CSS Selector for locating the whole web page" [ref=f1e1194] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/356-html-css-selector-for-locating.html
+                                    - listitem [ref=f1e1195]:
+                                      - link "body CSS Selector for locating the body of the web page" [ref=f1e1197] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/357-body-css-selector-for-locating-body.html
+                                    - listitem [ref=f1e1198]:
+                                      - link "Absolute CSS Selector path" [ref=f1e1200] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/358-absolute-css-selector-path.html
+                                    - listitem [ref=f1e1201]:
+                                      - link "Relative CSS Selector path" [ref=f1e1203] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/359-relative-css-selector-path.html
+                                    - listitem [ref=f1e1204]:
+                                      - 'link "Using # to select an element with a specified id" [ref=f1e1206] [cursor=pointer]':
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/360-using-to-select-element-with.html
+                                    - listitem [ref=f1e1207]:
+                                      - link "Using [attribute='value'] to select an element containing the specified attribute" [ref=f1e1209] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/361-using-attributevalue-to-select.html
+                                    - listitem [ref=f1e1210]:
+                                      - link "Using dot in CSS path to select an element with a specified class" [ref=f1e1212] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/362-using-dot-in-css-path-to-select.html
+                                    - listitem [ref=f1e1213]:
+                                      - link "Using [attribute] to select all the element containing the specified attribute" [ref=f1e1215] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/363-using-attribute-to-select-all.html
+                                    - listitem [ref=f1e1216]:
+                                      - link "Locating first child, last child and nth child with CSS path" [ref=f1e1218] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/364-locating-first-child-last-child-and.html
+                                    - listitem [ref=f1e1219]:
+                                      - link "Locating different elements using a single CSS path" [ref=f1e1221] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/365-locating-different-elements-using.html
+                                    - listitem [ref=f1e1222]:
+                                      - link "Using * wild card in CSS selector" [ref=f1e1224] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/366-using-wild-card-in-css-selector.html
+                                    - listitem [ref=f1e1225]:
+                                      - link "Using ^= , $= and *= in CSS selector" [ref=f1e1227] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/367-using-and-in-css-selector.html
+                                    - listitem [ref=f1e1228]:
+                                      - link "Using Boolean Operators in CSS selector" [ref=f1e1230] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/368-using-boolean-operators-in-css.html
+                                    - listitem [ref=f1e1231]:
+                                      - link "CSS selector Optimization" [ref=f1e1233] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/369-css-selector-optimization.html
+                                    - listitem [ref=f1e1234]:
+                                      - link "CSS selector Optimization Strategy One - Use the id attribute if available for the element but not used" [ref=f1e1236] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/370-css-selector-optimization-strategy.html
+                                    - listitem [ref=f1e1237]:
+                                      - link "CSS selector Optimization Strategy Two - Use the combination of attributes to make the CSS selector statement more specific" [ref=f1e1239] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/371-css-selector-optimization-strategy.html
+                                    - listitem [ref=f1e1240]:
+                                      - link "CSS selector Optimization Strategy Three - Use Relative CSS Statements instead of Absolute CSS Statements" [ref=f1e1242] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/372-css-selector-optimization-strategy.html
+                                    - listitem [ref=f1e1243]:
+                                      - link "Practice CSS Path" [ref=f1e1245] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/373-practice-css-path.html
+                                    - listitem [ref=f1e1246]:
+                                      - link "Easy and Regular way of finding CSS Path for Elements" [ref=f1e1248] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/374-easy-and-regular-way-of-finding-css.html
+                                    - listitem [ref=f1e1249]:
+                                      - link "Typing the Text into Text box by Locating the Text Box field using CSS Path Statement" [ref=f1e1251] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/375-typing-text-into-text-box-by.html
+                                    - listitem [ref=f1e1252]:
+                                      - link "Using isSelected( ) predefined method to get the status of the radio buttons and check box options" [ref=f1e1254] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/376-using-isselected-predefined-method.html
+                                    - listitem [ref=f1e1255]:
+                                      - link "Selecting values from the Drop down list by locating the Drop down field using CSS Path Statement" [ref=f1e1257] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/377-selecting-values-from-drop-down.html
+                                    - listitem [ref=f1e1258]:
+                                      - link "Clicking a link by locating it using CSS Path statement" [ref=f1e1260] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/378-clicking-link-by-locating-it-using.html
+                                    - listitem [ref=f1e1261]:
+                                      - link "Clicking the Button by locating it using CSS Path statement" [ref=f1e1263] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/379-clicking-button-by-locating-it.html
+                                    - listitem [ref=f1e1264]:
+                                      - link "Using sendKeys( ) command for entering text into a text box field" [ref=f1e1266] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/380-using-sendkeys-command-for-entering.html
+                                    - listitem [ref=f1e1267]:
+                                      - link "Using sendKeys( ) command for entering text into a Password field" [ref=f1e1269] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/381-using-sendkeys-command-for-entering.html
+                                    - listitem [ref=f1e1270]:
+                                      - link "Using sendKeys( ) command for entering single line text into a Text Area field" [ref=f1e1272] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/382-using-sendkeys-command-for-entering.html
+                                - cell [ref=f1e1273]:
+                                  - list [ref=f1e1274]:
+                                    - listitem [ref=f1e1275]:
+                                      - link "Using sendKeys( ) command for entering multiple lines of text into a Text Area field" [ref=f1e1277] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/383-using-sendkeys-command-for-entering.html
+                                    - listitem [ref=f1e1278]:
+                                      - link "Using clear( ) command to clear a text box field" [ref=f1e1280] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/384-using-clear-command-to-clear-text.html
+                                    - listitem [ref=f1e1281]:
+                                      - link "Using clear( ) command to clear a Text Area field" [ref=f1e1283] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/385-using-clear-command-to-clear-text.html
+                                    - listitem [ref=f1e1284]:
+                                      - link "Difference between close( ) and quit( ) Selenium WebDriver commands" [ref=f1e1286] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/386-difference-between-close-and-quit.html
+                                    - listitem [ref=f1e1287]:
+                                      - link "Launching more than one Browser windows" [ref=f1e1289] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/387-launching-more-than-one-browser.html
+                                    - listitem [ref=f1e1290]:
+                                      - link "Understanding how close( ) and quit( ) commands work when more than one window is opened" [ref=f1e1292] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/388-understanding-how-close-and-quit.html
+                                    - listitem [ref=f1e1293]:
+                                      - link "Understanding how close( ) and quit( ) commands work when only one window is opened" [ref=f1e1295] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/389-understanding-how-close-and-quit.html
+                                    - listitem [ref=f1e1296]:
+                                      - link "Try this if close( ) WebDriver command is not closing the Browser window" [ref=f1e1298] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/390-try-this-if-close-webdriver-command.html
+                                    - listitem [ref=f1e1299]:
+                                      - link "Using click( ) WebDriver command for selecting a check box option" [ref=f1e1301] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/391-using-click-webdriver-command-for.html
+                                    - listitem [ref=f1e1302]:
+                                      - link "Using click( ) command for deselecting a check box option" [ref=f1e1304] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/392-using-click-command-for-deselecting.html
+                                    - listitem [ref=f1e1305]:
+                                      - link "Using isSelected( ) method to get the status of the check box option" [ref=f1e1307] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/393-using-isselected-method-to-get.html
+                                    - listitem [ref=f1e1308]:
+                                      - link "Using click( ) command to select a radio button" [ref=f1e1310] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/394-using-click-command-to-select-radio.html
+                                    - listitem [ref=f1e1311]:
+                                      - link "Using isSelected( ) method to get the status of the radio button" [ref=f1e1313] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/395-using-isselected-method-to-get.html
+                                    - listitem [ref=f1e1314]:
+                                      - link "Using isEnabled( ) to find out whether the button is enabled" [ref=f1e1316] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/396-using-isenabled-to-find-out-whether.html
+                                    - listitem [ref=f1e1317]:
+                                      - link "Using isEnabled( ) to find out whether the text box field is in enabled state or disabled state" [ref=f1e1319] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/397-using-isenabled-to-find-out-whether.html
+                                    - listitem [ref=f1e1320]:
+                                      - link "Using sendKeys( ) command to select a list item from the drop down field" [ref=f1e1322] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/398-using-sendkeys-command-to-select.html
+                                    - listitem [ref=f1e1323]:
+                                      - link "Using deselectAll( ) command to deselect any already selected list options in the multiple-selection Box" [ref=f1e1325] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/399-using-deselectall-command-to.html
+                                    - listitem [ref=f1e1326]:
+                                      - link "Using selectByVisibleText( ) command to select more than one list options from the Multi Select Box field" [ref=f1e1328] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/400-using-selectbyvisibletext-command.html
+                                    - listitem [ref=f1e1329]:
+                                      - link "Using deselectByVisibleText( ) command to deselect any list option from the Multi Select Box field" [ref=f1e1331] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/401-using-deselectbyvisibletext-command.html
+                                    - listitem [ref=f1e1332]:
+                                      - link "Using selectByIndex( ) command to select any list option using its Index value from the Multi Select Box field" [ref=f1e1334] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/402-using-selectbyindex-command-to.html
+                                    - listitem [ref=f1e1335]:
+                                      - link "Using deselectByIndex( ) command to deselect any list option using its Index value from the Multi Select Box field" [ref=f1e1337] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/403-using-deselectbyindex-command-to.html
+                                    - listitem [ref=f1e1338]:
+                                      - link "Using selectByValue( ) command to select the list option from the Multi Select Box field using the specified value" [ref=f1e1340] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/404-using-selectbyvalue-command-to.html
+                                    - listitem [ref=f1e1341]:
+                                      - link "Using deselectByValue( ) command to deselect the list option from the Multi Select Box field using its value" [ref=f1e1343] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/405-using-deselectbyvalue-command-to.html
+                                    - listitem [ref=f1e1344]:
+                                      - link "Using selectByVisibleText( ) command with Drop Down Field" [ref=f1e1346] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/406-using-selectbyvisibletext-command.html
+                                    - listitem [ref=f1e1347]:
+                                      - link "Using selectByIndex( ) command with Drop Down field" [ref=f1e1349] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/407-using-selectbyindex-command-with.html
+                                    - listitem [ref=f1e1350]:
+                                      - link "Using selectByValue( ) command with Drop Down field" [ref=f1e1352] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/408-using-selectbyvalue-command-with.html
+                                    - listitem [ref=f1e1353]:
+                                      - link "Using navigate( ).to( ) command to open the specified URL" [ref=f1e1355] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/409-using-navigate-to-command-to-open.html
+                                    - listitem [ref=f1e1356]:
+                                      - link "Using navigate( ).back( ) command to move backward in our browser" [ref=f1e1358] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/410-using-navigate-back-command-to-move.html
+                                    - listitem [ref=f1e1359]:
+                                      - link "Using navigate( ).forward( ) command to move forward in our browser" [ref=f1e1361] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/411-using-navigate-forward-command-to.html
+                                    - listitem [ref=f1e1362]:
+                                      - link "Using sendKeys( ) command to browser a file" [ref=f1e1364] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/412-using-sendkeys-command-to-browser.html
+                                    - listitem [ref=f1e1365]:
+                                      - link "Using click( ) for clicking a button" [ref=f1e1367] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/413-using-click-for-clicking-button.html
+                                    - listitem [ref=f1e1368]:
+                                      - link "Using click( ) for clicking a link" [ref=f1e1370] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/414-using-click-for-clicking-link.html
+                                    - listitem [ref=f1e1371]:
+                                      - link "Using getAttribute(\"value\") with a text box field" [ref=f1e1373] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/415-using-getattributevalue-with-text.html
+                                    - listitem [ref=f1e1374]:
+                                      - link "Using getAttribute(\"value\") method with Password field" [ref=f1e1376] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/416-using-getattributevalue-method-with.html
+                                    - listitem [ref=f1e1377]:
+                                      - link "Using getAttribute(\"value\") method with Text Area field" [ref=f1e1379] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/417-using-getattributevalue-method-with.html
+                                    - listitem [ref=f1e1380]:
+                                      - link "Using getAttribute(\"value\") method with drop down field" [ref=f1e1382] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/418-using-getattributevalue-method-with.html
+                                    - listitem [ref=f1e1383]:
+                                      - link "Using getFirstSelectedOption( ) with drop down field to retrieve the label text of the list option that is currently selected" [ref=f1e1385] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/419-using-getfirstselectedoption-with.html
+                                    - listitem [ref=f1e1386]:
+                                      - link "Using getFirstSelectedOption( ) with Multi-Selection Box field to retrieve the label text of the option that is selected first in the field" [ref=f1e1388] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/420-using-getfirstselectedoption-with.html
+                                    - listitem [ref=f1e1389]:
+                                      - link "Using isMultiple( ) with a drop down fiel" [ref=f1e1391] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/421-using-ismultiple-with-drop-down.html
+                                    - listitem [ref=f1e1392]:
+                                      - link "Using isMultiple( ) with Multi-Selection Box field" [ref=f1e1394] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/422-using-ismultiple-with-multi.html
+                                    - listitem [ref=f1e1395]:
+                                      - link "Using getAllSelectedOptions( ) to get all the selected options in Multi-Selection Box field" [ref=f1e1397] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/423-using-getallselectedoptions-to-get.html
+                                    - listitem [ref=f1e1398]:
+                                      - link "Using getOptions( ) to get all the options available in Drop Down field" [ref=f1e1400] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/424-using-getoptions-to-get-all-options.html
+                                    - listitem [ref=f1e1401]:
+                                      - link "Using getOptions( ) to get all the options available in Multi-Selection Box field" [ref=f1e1403] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/425-using-getoptions-to-get-all-options.html
+                                    - listitem [ref=f1e1404]:
+                                      - link "Entering an integer variables value into a text box field using sendKeys( ) command" [ref=f1e1406] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/426-entering-integer-variables-value.html
+                                    - listitem [ref=f1e1407]:
+                                      - link "Using size( ) to retrieve the count of list options available in the drop down field" [ref=f1e1409] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/427-using-size-to-retrieve-count-of.html
+                                    - listitem [ref=f1e1410]:
+                                      - link "Using size( ) to retrieve the count of list options available in the Multi-Selection Box field" [ref=f1e1412] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/428-using-size-to-retrieve-count-of.html
+                                    - listitem [ref=f1e1413]:
+                                      - link "Locating elements using By.tagName( )" [ref=f1e1415] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/429-locating-elements-using-bytagname.html
+                                    - listitem [ref=f1e1416]:
+                                      - link "Using findElements( )" [ref=f1e1418] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/430-using-findelements.html
+                                    - listitem [ref=f1e1419]:
+                                      - link "Using getTitle( ) to retrieve the title of the page" [ref=f1e1421] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/431-using-gettitle-to-retrieve-title-of.html
+                                    - listitem [ref=f1e1422]:
+                                      - link "Using getText( ) to retrieve the elements text" [ref=f1e1424] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/432-using-gettext-to-retrieve-elements.html
+                                    - listitem [ref=f1e1425]:
+                                      - link "Get XPath Count in Selenium WebDriver" [ref=f1e1427] [cursor=pointer]:
+                                        - /url: http://selenium-by-arun.blogspot.com/2017/04/433-get-xpath-count-in-selenium.html
+                          - generic [ref=f1e1429]:
+                            - generic:
+                              - generic:
+                                - iframe
+                            - separator [ref=f1e1430]
+                          - generic [ref=f1e1431]:
+                            - heading "Blog Stats" [level=2] [ref=f1e1432]
+                            - link "StatCounter - Free Web Tracker and Counter" [ref=f1e1435] [cursor=pointer]:
+                              - /url: https://www.statcounter.com/
+                              - img "StatCounter - Free Web Tracker and Counter" [ref=f1e1436]
+                        - table:
+                          - rowgroup:
+                            - row:
+                              - cell
+                              - cell
+                        - generic [ref=f1e1439]:
+                          - text: Theme images by
+                          - link "Jason Morrow" [ref=f1e1440] [cursor=pointer]:
+                            - /url: http://jasonmorrow.etsy.com
+                          - text: . Powered by
+                          - link "Blogger" [ref=f1e1441] [cursor=pointer]:
+                            - /url: https://www.blogger.com
+                          - text: .
+              - iframe [ref=e127]
+          - generic [ref=e128]:
+            - heading "LoginSection" [level=2] [ref=e129]
+            - generic [ref=e130]:
+              - text: Login page
+              - heading "Simple Login Page" [level=1] [ref=e131]
+              - generic [ref=e132]:
+                - text: Username
+                - textbox [ref=e133]
+                - text: Password
+                - textbox [ref=e134]
+                - button "Login" [ref=e135]
+                - button "Cancel" [ref=e136]
+          - paragraph [ref=e139]: www.selenium-by-arun.blogspot.com
+        - complementary [ref=e142]:
+          - generic [ref=e143]:
+            - paragraph [ref=e146]: PracticeAutomationHere
+            - generic [ref=e147]:
+              - heading "Multi Selection box" [level=2] [ref=e148]
+              - listbox [ref=e150]:
+                - option "Volvo" [ref=e151]
+                - option "Swift" [ref=e152]
+                - option "Hyundai" [ref=e153]
+                - option "Audi" [ref=e154]
+            - combobox [ref=e157]:
+              - option "Older Newsletters" [selected]
+              - option "doc 1"
+              - option "doc 2"
+              - option "doc 3"
+              - option "doc 4"
+            - generic [ref=e159]: This is a sample Text on this page. This is a sample Text on this page. This is a sample Text on this page.
+            - link "Selenium143" [ref=e162] [cursor=pointer]:
+              - /url: http://www.Selenium143.blogspot.com
+            - link "Selenium143" [ref=e165] [cursor=pointer]:
+              - /url: http://www.Selenium143.blogspot.com
+            - generic [ref=e166]:
+              - heading "Text Box with Preloaded Text" [level=2] [ref=e167]
+              - textbox [ref=e169]: Selenium WebDriver
+            - generic [ref=e170]:
+              - heading "Opens In New Window Link" [level=2] [ref=e171]
+              - link "SeleniumTutorial" [ref=e173] [cursor=pointer]:
+                - /url: http://www.Selenium143.blogspot.com
+            - generic [ref=e174]:
+              - heading "Enabled Button" [level=2] [ref=e175]
+              - button "Button2" [ref=e177]
+            - generic [ref=e178]:
+              - heading "Disabled Button" [level=2] [ref=e179]
+              - button "Button1" [disabled] [ref=e181]
+            - generic [ref=e182]:
+              - heading "Disabled Text Box" [level=2] [ref=e183]
+              - textbox [disabled] [ref=e185]
+            - generic [ref=e186]:
+              - heading "Buttons with same name attribute values" [level=2] [ref=e187]
+              - generic [ref=e188]:
+                - button "Submit" [ref=e189]
+                - button "Login" [ref=e190]
+                - button "Register" [ref=e191]
+            - generic [ref=e192]:
+              - heading "Ordered List" [level=2] [ref=e193]
+              - list "list1" [ref=e195]:
+                - listitem [ref=e196]: One
+                - listitem [ref=e197]: Two
+                - listitem "arun" [ref=e198]: Three
+                - listitem [ref=e199]: Four
+                - listitem [ref=e200]: Five
+                - listitem [ref=e201]: Six
+            - generic [ref=e202]:
+              - heading "UnOrdered list" [level=2] [ref=e203]
+              - list [ref=e205]:
+                - listitem [ref=e206]: Apple
+                - listitem [ref=e207]: Mango
+                - listitem [ref=e208]: Orange
+                - listitem [ref=e209]: Banana
+                - listitem [ref=e210]: Grapes
+                - listitem [ref=e211]: Pomegranate
+            - generic [ref=e212]:
+              - heading "DisplayForTimeAndDissapear" [level=2] [ref=e213]
+              - generic [ref=e214]:
+                - generic [ref=e215]: This text will disappear after 25 seconds
+                - button "ClickAfterTextDissappears" [ref=e216]
+            - generic [ref=e217]:
+              - heading "TextWillBeDisplayedWithDelay" [level=2] [ref=e218]
+              - generic [ref=e220]: This text is displayed after 10 seconds of wait.
+            - generic [ref=e221]:
+              - heading "Popup Window" [level=2] [ref=e222]
+              - paragraph [ref=e224]:
+                - link "Open a popup window" [ref=e225] [cursor=pointer]:
+                  - /url: JavaScript:newPopup('https://the-internet.herokuapp.com/windows/new');
+            - generic [ref=e226]:
+              - heading "UploadFile" [level=2] [ref=e227]
+              - button "Choose File" [ref=e230]
+            - generic [ref=e231]:
+              - heading "TimerEnableButton" [level=2] [ref=e232]
+              - button "Button3" [ref=e234]
+            - generic [ref=e235]:
+              - heading "Disable Enable Button" [level=2] [ref=e236]
+              - generic [ref=e237]:
+                - button "My Button" [ref=e238]
+                - paragraph [ref=e239]: Click the button try it button to disable the button after 3 seconds.
+                - button "Try it" [ref=e240]
+            - generic [ref=e242]:
+              - button "Button X" [ref=e243]
+              - button "Button Y" [ref=e244]
+            - button "Double click Here" [ref=e247]
+            - generic [ref=e249]:
+              - text: "Mr Option:"
+              - checkbox [disabled] [ref=e250]
+              - paragraph [ref=e251]: The above Mr Option will be enabled in 10 seconds after clicking on below Check this button
+              - button "Check this" [ref=e252]
+        - complementary [ref=e255]:
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - heading "Image Element" [level=2] [ref=e258]
+              - img [ref=e260]
+            - generic [ref=e261]:
+              - heading "Search This Blog" [level=2] [ref=e262]
+              - table [ref=e266]:
+                - rowgroup [ref=e267]:
+                  - row "Search" [ref=e268]:
+                    - cell [ref=e269]:
+                      - textbox "search" [ref=e270]
+                    - cell "Search" [ref=e271]:
+                      - button "Search" [ref=e272]
+            - generic [ref=e273]:
+              - heading "Radio options" [level=2] [ref=e274]
+              - generic [ref=e275]:
+                - radio [ref=e276]
+                - text: Male
+                - radio [ref=e277]
+                - text: Female
+            - generic [ref=e278]:
+              - heading "AlertDemo" [level=2] [ref=e279]
+              - button "ClickToGetAlert" [ref=e281]
+            - generic [ref=e282]:
+              - heading "By Default Selected Check Box option" [level=2] [ref=e283]
+              - generic [ref=e284]:
+                - text: Orange
+                - checkbox [checked] [ref=e285]
+                - text: Blue
+                - checkbox [ref=e286]
+            - generic [ref=e287]:
+              - heading "Readonly TextBox" [level=2] [ref=e288]
+              - textbox [ref=e290]: ReadThisText
+            - generic [ref=e291]:
+              - heading "GetPrompt" [level=2] [ref=e292]
+              - button "GetPrompt" [ref=e294]
+            - generic [ref=e295]:
+              - heading "Confirmation Dialog" [level=2] [ref=e296]
+              - button "GetConfirmation" [ref=e298]
+            - heading "Hidden Button" [level=2] [ref=e300]
+            - generic [ref=e301]:
+              - heading "Locate using name attribute" [level=2] [ref=e302]
+              - textbox [ref=e304]
+            - generic [ref=e305]:
+              - heading "Other Sites to Practice Automation" [level=2] [ref=e306]
+              - list [ref=e308]:
+                - listitem [ref=e309]:
+                  - link "compendiumdev" [ref=e310] [cursor=pointer]:
+                    - /url: http://compendiumdev.co.uk/selenium/basic_web_page.html
+                - listitem [ref=e311]:
+                  - link "onlytestingblog" [ref=e312] [cursor=pointer]:
+                    - /url: http://only-testing-blog.blogspot.in/2014/01/textbox.html
+                - listitem [ref=e313]:
+                  - link "testwisely" [ref=e314] [cursor=pointer]:
+                    - /url: http://testwisely.com/demo
+                - listitem [ref=e315]:
+                  - link "jqueryui" [ref=e316] [cursor=pointer]:
+                    - /url: http://jqueryui.com/
+                - listitem [ref=e317]:
+                  - link "theautomatedtester" [ref=e318] [cursor=pointer]:
+                    - /url: http://book.theautomatedtester.co.uk
+            - generic [ref=e319]:
+              - heading "Having same id and name attribute values" [level=2] [ref=e320]
+              - button "SameIDName" [ref=e322]
+            - generic [ref=e323]:
+              - heading "Locate using class" [level=2] [ref=e324]
+              - textbox [ref=e326]
+            - generic [ref=e327]:
+              - heading "element having same class name of above field" [level=2] [ref=e328]
+              - textbox [ref=e330]
+            - generic [ref=e331]:
+              - heading "Select a vehicle" [level=2] [ref=e332]
+              - generic [ref=e333]:
+                - text: "Bike:"
+                - radio [ref=e334]
+                - text: "Bicycle:"
+                - radio [checked] [ref=e335]
+                - text: "Car:"
+                - radio [ref=e336]
+            - generic [ref=e337]:
+              - heading "Select multiple options" [level=2] [ref=e338]
+              - generic [ref=e339]:
+                - text: "Pen:"
+                - checkbox [ref=e340]
+                - text: "Book:"
+                - checkbox [checked] [ref=e341]
+                - text: "Laptop:"
+                - checkbox [ref=e342]
+                - text: "Bag:"
+                - checkbox [ref=e343]
+            - generic [ref=e344]:
+              - heading "TestDoubleClick" [level=2] [ref=e345]
+              - generic [ref=e346]:
+                - paragraph [ref=e347]: Double-click
+                - paragraph
+            - generic [ref=e348]:
+              - heading "Delayed-Button-Dropdown" [level=2] [ref=e349]
+              - button "Dropdown" [ref=e351] [cursor=pointer]
+          - table:
+            - rowgroup:
+              - row:
+                - cell
+                - cell
+    - contentinfo [ref=e352]:
+      - generic [ref=e355]:
+        - table:
+          - rowgroup:
+            - row:
+              - cell
+              - cell
+              - cell
+        - generic [ref=e358]:
+          - text: Simple theme. Powered by
+          - link "Blogger" [ref=e359] [cursor=pointer]:
+            - /url: https://www.blogger.com
+          - text: .
+```
+
+# Test source
+
+```ts
+  1  | import {test , expect} from '@playwright/test';
+  2  | 
+  3  | test('Action Test',async({page})=>{
+  4  |     await page.goto("https://omayo.blogspot.com/");
+  5  | 
+  6  |     page.waitForTimeout(2000)
+> 7  |     await page.locator('#radio2').check();
+     |                                   ^ Error: locator.check: Test timeout of 30000ms exceeded.
+  8  |     page.waitForTimeout(2000)
+  9  |     await page.locator('#checkbox1').check();
+  10 |     page.waitForTimeout(2000)
+  11 |     await page.locator('#checkbox2').check();
+  12 |     page.waitForTimeout(2000)
+  13 |     await page.locator('#checkbox2').uncheck();
+  14 |     page.waitForTimeout(2000)
+  15 |     await page.selectOption('#multiselect1',[ { value: 'volvox' },{ value: 'swiftx' },{ value: 'audix' }]);
+  16 |     page.waitForTimeout(2000)
+  17 |     await page.selectOption('#drop1', { value: 'def' });
+  18 | 
+  19 | });
+```
