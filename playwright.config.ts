@@ -7,7 +7,7 @@ import { worker } from 'node:cluster';
 export default defineConfig({
   testDir: './tests',
   workers:process.env.CI?1:undefined,
-  testMatch:['/tests/file.test.ts'],
+  //testMatch:['/tests/file.test.ts'],
   //repeatEach:2,
   retries:2,
   reporter: [
